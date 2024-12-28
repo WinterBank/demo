@@ -1,0 +1,33 @@
+[package]
+name = "api"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix = "0.13.5"
+actix-web = "4.9.0"
+actix-files = "0.6.6"
+actix-cors = "0.7.0"
+actix-ws = "0.3.0"
+sqlx = { version = "0.8.2", features = ["runtime-tokio-native-tls", "postgres", "chrono"] }
+serde = { version = "1.0.215", features = ["derive"] }
+tokio = { version = "1.41.1", features = ["full"] }
+log = "0.4.22"
+env_logger = "0.11.5"
+hex = "0.4.3"
+ed25519-dalek = { version = "2.1.1", features = ["rand_core"] }
+blake3 = "1.5.5"
+argon2 = "0.5.3"
+serde_json = "1.0.133"
+rand = "0.8.5"
+redis = { version = "0.27.6", features = ["aio", "tokio-comp"] }
+anyhow = "1.0.94"
+num-traits = "0.2.19"
+futures-util = "0.3.31"
+
+
+dotenvy = "0.15.7"
+actix-rt = "2.10.0"
+
+models = { path = "../models" }
+miner = { path = "../miner" }

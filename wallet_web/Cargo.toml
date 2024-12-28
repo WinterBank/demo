@@ -1,0 +1,32 @@
+[package]
+name = "wallet_web"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = [
+]
+resolver = "2"
+
+[dependencies]
+yew = { version = "0.21.0", features = ["csr"] }
+wasm-bindgen = "0.2.99"
+wasm-bindgen-futures = "0.4.49"
+web-sys = "0.3.76"
+gloo = "0.6"
+gloo-net = "0.6.0"
+gloo-timers = "0.3.0"
+serde = { version = "1.0.215", features = ["derive"] }
+serde_json = "1.0.133"
+hex = "0.4.3"
+reqwest = { version = "0.12.9", features = ["json"] }
+futures-util = "0.3.31"
+
+# debug
+gloo-console = "0.3.0"
+
+# Import your `wallet` crate to reuse logic:
+wallet_core = { path = "../wallet_core" }
+
+[lib]
+crate-type = ["cdylib"]
