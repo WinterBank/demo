@@ -19,8 +19,8 @@ use wallet_core::routes::{
     SignedTransaction,
 };
 
-const ACTIX_HTTP_URL: &str = "http://http://107.196.36.121:8080";
-const ACTIX_WS_URL: &str = "ws://http://107.196.36.121:8080/ws";
+const ACTIX_HTTP_URL: &str = "http://http://127.0.0.1:8080";
+const ACTIX_WS_URL: &str = "ws://http://127.0.0.1:8080/ws";
 
 /// A small helper struct to hold the main account info from the server.
 #[derive(Serialize, Deserialize, Debug, Clone)]
